@@ -31,17 +31,18 @@ export class demopcf implements ComponentFramework.StandardControl<IInputs, IOut
         this.container = container;
         const initData:testDragProps = { 
             items: [
-                { id:"0" ,content:"Item1"}, 
-                { id:"1" ,content:"Item2"}
+                {id:"item-1", content:"Item1"}, 
+                {id:"item-2", content:"Item2"}
             ],  
             columns:[
-                {id:"a", title: "column a", itemIds:["0","1"]},
+                {id:"a", title: "column a", itemIds:["item-1", "item-2"]},
                 {id:"b", title: "column b", itemIds:[]}
             ],
             columnOrder:[
                 "a",
-                "b"]
-        }
+                "b"
+	    ],
+        };
         
         ReactDOM.render(React.createElement(poc, initData), this.container);
     }
